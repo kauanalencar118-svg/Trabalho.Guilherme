@@ -5,7 +5,7 @@ Este projeto representa um sistema para gerenciamento de aluguel de quadras, des
 
 ---
 
-## 🗄️ Tabelas Identificadas
+## Tabelas Identificadas
 
 Foram identificadas as seguintes tabelas (models):
 
@@ -32,7 +32,7 @@ Foram identificadas as seguintes tabelas (models):
 
 ---
 
-## ⚙️ Regras Identificadas
+##  Regras Identificadas
 
 - O nome e telefone do cliente são obrigatórios.
 - O valor do horário não pode ser negativo.
@@ -43,8 +43,7 @@ Foram identificadas as seguintes tabelas (models):
 
 ---
 
-## 🧱 Estrutura MVC
-
+##  Estrutura MVC
 O projeto utiliza o padrão MVC com os seguintes pacotes:
 
 - model → Representa os dados do sistema.
