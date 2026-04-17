@@ -1,55 +1,36 @@
 # Trabalho.Guilherme
-# Sistema de Aluguel de Quadra
+Exercício 1 – Controle de Aluguel de Quadra Esportiva
+Tabelas
+TabelaCamposclientesid, nome, telefonehorariosid, horario_inicio, horario_fim, valoralugueisid, cliente_id, horario_id, data, valor_cobrado
+Regras
 
-Este projeto representa um sistema para gerenciamento de aluguel de quadras, desenvolvido utilizando Java e o padrão MVC.
+Nome do cliente não pode ser vazio
+Valor do horário não pode ser negativo
+Não é permitido reservar um horário já ocupado na mesma data
+O sistema calcula automaticamente o valor total quando o cliente aluga mais de um horário no mesmo dia
+Deve ser possível consultar todos os aluguéis por data
 
----
 
-## Tabelas Identificadas
+Exercício 2 – Controle de Biblioteca Escolar
+Tabelas
+TabelaCamposlivrosid, titulo, autor, quantidade_disponivelalunosid, nomeemprestimosid, livro_id, aluno_id, data_emprestimo, data_devolucao
+Regras
 
-Foram identificadas as seguintes tabelas (models):
+Título do livro não pode ser vazio
+Quantidade disponível não pode ser negativa
+Não é permitido emprestar um livro com quantidade disponível igual a zero
+Ao registrar empréstimo, a quantidade disponível do livro diminui em 1
+Ao registrar devolução, a quantidade disponível aumenta em 1
+Deve ser possível consultar livros atualmente emprestados e alunos com empréstimos em aberto
 
-### Cliente
-- id
-- nome
-- telefone
-- email
 
-### Horario
-- id
-- horaInicio
-- horaFim
-- valor
-- disponivel
+Exercício 3 – Controle de Pedidos em Lanchonete
+Tabelas
+TabelaCamposprodutosid, nome, descricao, precopedidosid, data, valor_totalitens_pedidoid, pedido_id, produto_id, quantidade
+Regras
 
-### Aluguel
-- id
-- cliente
-- horario
-- data
-- valorCobrado
-- pago
-
----
-
-##  Regras Identificadas
-
-- O nome e telefone do cliente são obrigatórios.
-- O valor do horário não pode ser negativo.
-- Um horário só pode ser alugado se estiver disponível.
-- Ao realizar um aluguel, o horário fica indisponível.
-- A data do aluguel é obrigatória.
-- O pagamento inicia como pendente e pode ser atualizado para pago.
-
----
-
-##  Estrutura MVC
-O projeto utiliza o padrão MVC com os seguintes pacotes:
-
-- model → Representa os dados do sistema.
-- controller → Controla as ações do sistema.
-- view → Interface com o usuário.
-- repository → Simula o armazenamento de dados.
-- main/application → Inicializa o sistema.
-
-- 
+Nome do produto não pode ser vazio
+Preço do produto não pode ser negativo
+Um pedido só pode ser finalizado se tiver pelo menos um produto adicionado
+O valor total do pedido é calculado automaticamente com base nos produtos e quantidades
+Deve ser possível consultar pedidos por data e o total faturado no período
